@@ -24,34 +24,49 @@
 }
 
 html {
-    background: var(--main-bg-color);
-    min-height: 100vh;
+    background: url("/images/fundo.png") no-repeat;
+    background-size: cover;
 }
 
-body {
-    min-height: 100vh;
+.container__agentes{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    margin-top: -40px;
 }
 
-.container__titulo{
+.agentes{
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 2px;
+    flex-wrap: wrap;
 }
 
-.titulo__valorant{
-    font-family: 'VALORANT', sans-serif;
-    font-size: 6em;
-    margin-bottom: 1em;
-}
-
-.container__agentes-primeira_linha, .container__agentes-segunda_linha{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.agentes-linha-um{
+    margin-bottom: 2px;
 }
 
 .agente{
-    height: 80px;
-    width: 80px;
-    background-color: black;
+    height: 65px;
+    width: 65px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.container__informacoes-agentes{
+    width: 30%;
+}
+
+.container__skills{
+    display: flex;
+}
+
+.skills{
+    width: 75px;
+    text-align: center;
+}
+
+.skills__logo{
+    width: 50px;
 }
