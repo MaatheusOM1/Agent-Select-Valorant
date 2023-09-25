@@ -1,0 +1,57 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+/*
+:root {
+
+}
+
+[data-contexto="foco"] {
+    --main-bg-color: linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+}
+
+[data-contexto="descanso-curto"] {
+    --main-bg-color: linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
+}
+
+[data-contexto="descanso-longo"] {
+    --main-bg-color: linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+}
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html {
+    background: var(--main-bg-color);
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.container__titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo__valorant{
+    font-family: 'VALORANT', sans-serif;
+    font-size: 6em;
+    margin-bottom: 1em;
+}
+
+.container__agentes-primeira_linha, .container__agentes-segunda_linha{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.agente{
+    height: 80px;
+    width: 80px;
+    background-color: black;
+}
