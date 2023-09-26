@@ -6,23 +6,9 @@
     --fonte-role: 'Noto Sans JP', sans-serif;
 }
 
-/*
-[data-contexto="foco"] {
-    --main-bg-color: linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
-}
-
-[data-contexto="descanso-curto"] {
-    --main-bg-color: linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
-}
-
-[data-contexto="descanso-longo"] {
-    --main-bg-color: linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
-}
-*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -30,8 +16,11 @@ html {
     background-size: cover;
 }
 
-.container__agentes{
-    margin-top: 50px;
+.container__agentes-flex{
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 
 .agentes{
@@ -54,6 +43,7 @@ html {
 
 .agente__foto{
     width: 100%;
+    cursor: pointer;
 }
 
 .container__wrap{
@@ -79,6 +69,8 @@ html {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.27);
+    font-family: var(--fonte-role);
+    cursor: pointer;
 }
 
 .skills__logo{
@@ -109,4 +101,14 @@ html {
 
 .info__role{
     color: #fff;
+}
+
+.app__card-timer {
+    color: #fff;
+    font-family: var(--fonte-role);
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: normal;
+    margin: -.5em 1em;
+    position: fixed;
 }
