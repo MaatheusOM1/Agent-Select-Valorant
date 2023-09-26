@@ -1,9 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/valorant');
-/*
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oswald:wght@700&display=swap');
 
+:root {
+    --fonte-agente: 'Oswald', sans-serif;
+    --fonte-role: 'Noto Sans JP', sans-serif;
 }
 
+/*
 [data-contexto="foco"] {
     --main-bg-color: linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
 }
@@ -20,7 +23,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100%;
 }
 
 html {
@@ -29,11 +31,7 @@ html {
 }
 
 .container__agentes{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 100vh;
-    margin-top: -40px;
+    margin-top: 50px;
 }
 
 .agentes{
@@ -54,19 +52,61 @@ html {
     border: 1px solid white;
 }
 
+.agente__foto{
+    width: 100%;
+}
+
+.container__wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin: 80px 70px 0 0;
+}
+
 .container__informacoes-agentes{
-    width: 30%;
+    width: 25%;
 }
 
 .container__skills{
     display: flex;
+    gap: 3px;
 }
 
 .skills{
     width: 75px;
     text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
 }
 
 .skills__logo{
-    width: 50px;
+    width: 30px;
+}
+
+.nome__agente{
+    font-family: var(--fonte-agente);
+    font-size: 4em;
+    color: rgb(255, 255, 157);
+}
+
+.role__agente{
+    font-family: var(--fonte-role);
+    font-size: 1em;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.info__agente, .info__role{
+    font-family: var(--fonte-role);
+    font-size: .9em;
+}
+
+.info__agente{
+    color: rgb(255, 255, 157);
+}
+
+.info__role{
+    color: #fff;
 }
