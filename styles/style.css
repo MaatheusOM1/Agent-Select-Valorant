@@ -109,7 +109,7 @@ html {
     font-size: 5rem;
     font-weight: 700;
     line-height: normal;
-    margin: .1em 0 0 1.7em;
+    margin: .8em 0 0 2em;
     position: fixed;
 }
 
@@ -117,5 +117,34 @@ html {
     display: flex;
     gap: 20px;
     position: fixed;
-    margin: 9em 0 0 4em;
+    margin: 12em 0 0 4em;
+}
+
+.spike__logo{
+    opacity: .3;
+    width: 100px;
+    position: fixed;
+    margin: 1em 0 0 2em;
+}
+
+.texto__map{ 
+    position: fixed;
+    margin: 3em 0 0 6em;
+}
+
+.missoes{
+    position: fixed;
+    margin: -3.5em 0 0 2em;
+}
+
+.missao__diaria, .missao__semanal{
+    display: flex;
+    margin: .5em;
+}
+
+.missoes__logo{
+    filter: grayscale(0);
+    width: 25px;
+    height: 25px;
+    margin-right: .5em;
 }
