@@ -90,7 +90,7 @@ html {
     color: #fff;
 }
 
-.info__agente, .info__role{
+.info__agente, .info__role, .picking{
     font-family: var(--fonte-role);
     font-size: .9em;
 }
@@ -99,7 +99,7 @@ html {
     color: rgb(255, 255, 157);
 }
 
-.info__role{
+.info__role, .picking{
     color: #fff;
 }
 
@@ -109,6 +109,13 @@ html {
     font-size: 5rem;
     font-weight: 700;
     line-height: normal;
-    margin: -.5em 1em;
+    margin: .1em 0 0 1.7em;
     position: fixed;
+}
+
+.timer__pick{
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    margin: 9em 0 0 4em;
 }
