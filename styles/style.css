@@ -50,12 +50,35 @@ html {
 .container__wrap{
     display: flex;
     justify-content: flex-end;
-    margin: 80px 0 0 300px;
     position: fixed;
+    top: 10%;
+    right: 10%;
+    width: 25%;
 }
 
-.container__informacoes-agentes{
-    width: 25%;
+.linha__vertical{
+    position: fixed;
+    height: 275px;
+    border: 1px solid #fff;
+    opacity: .6;
+    top: 15%;
+    right: 36%;
+}
+
+.linha__horizontal{
+    position: fixed;
+    width: 23%;
+    border: 1px solid #fff;
+    opacity: .6;
+    top: 40%;
+}
+
+.linha__horizontal-agentes{
+    position: fixed;
+    width: 48%;
+    border: 1px solid #fff;
+    opacity: .5;
+    top: 79%;
 }
 
 .container__skills{
