@@ -22,16 +22,32 @@ const sova = document.querySelector('.sova')
 const viper = document.querySelector('.viper')
 const yoru = document.querySelector('.yoru')
 
+
 //Declaração das variáveis para o timer
 const tempoNaTela = document.querySelector('#timer')
 let tempoDecorridoEmSegundos = 90
 
+
 const infoAgentes = document.querySelector('.container__wrap') // Variável para manipulação de DOM
 const agentePickado = document.querySelector('#agente__pickado') // Variável para mudar a foto de acordo com o agente
+const Picking = document.querySelector('.picking') // Variável para trocar o nome de acordo com o pick
+
 
 const btnConfirmar = document.querySelector('.btn__confirmar') // Variável do botão "CONFIRMAR"
+const textoConfirmar = document.querySelector('.texto__confirmar')// Variável do texto do botão "CONFIRMAR"
 const agentes = document.querySelectorAll('.agente'); //Variável de todos os agentes
 
+
+// Variáveis dos sons
+const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
+const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
+const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
+// Sons dos LockIn
+const lockKilljoy = new Audio('/sounds/lock-in-killjoy.mp3')
+
+
+// Variável para o agente selecionado
+let agenteSelecionado = null
 
 //Funções para o Contador
 //Função para a contagem regressiva do contador
@@ -183,6 +199,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
+            Picking.innerHTML = `Astra`
             break;
         case "breach":
             infoAgentes.innerHTML =  `
@@ -217,6 +234,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Breach`
             break;
         case "brimstone":
             infoAgentes.innerHTML =  `
@@ -251,6 +269,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
+            Picking.innerHTML = `Brimstone`
             break;
         case "chamber":
             infoAgentes.innerHTML =  `
@@ -285,6 +304,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
+            Picking.innerHTML = `Chamber`
             break;
         case "cypher":
             infoAgentes.innerHTML =  `
@@ -319,6 +339,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
+            Picking.innerHTML = `Chyper`
             break;
         case "deadlock":
             infoAgentes.innerHTML =  `
@@ -353,6 +374,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
+            Picking.innerHTML = `Deadlock`
             break;
         case "fade":
             infoAgentes.innerHTML =  `
@@ -387,6 +409,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Fade`
             break;
         case "geeko":
             infoAgentes.innerHTML =  `
@@ -421,6 +444,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Geeko`
             break;
         case "harbor":
             infoAgentes.innerHTML =  `
@@ -455,6 +479,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
+            Picking.innerHTML = `Harbor`
             break;
         case "jett":
             infoAgentes.innerHTML =  `
@@ -489,6 +514,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Jett`
             break;
         case "kayo":
             infoAgentes.innerHTML =  `
@@ -523,6 +549,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Kay/o`
             break;
         case "killjoy":
             infoAgentes.innerHTML =  `
@@ -557,6 +584,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
+            Picking.innerHTML = `Killjoy`
             break;
         case "neon":
             infoAgentes.innerHTML =  `
@@ -591,6 +619,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Neon`
             break;
         case "omen":
             infoAgentes.innerHTML =  `
@@ -625,6 +654,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
+            Picking.innerHTML = `Omen`
             break;
         case "phoenix":
             infoAgentes.innerHTML =  `
@@ -659,6 +689,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Phoenix`
             break;
         case "raze":
             infoAgentes.innerHTML =  `
@@ -693,6 +724,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Raze`
             break;
         case "reyna":
             infoAgentes.innerHTML =  `
@@ -727,6 +759,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Reyna`
             break;
         case "sage":
             infoAgentes.innerHTML =  `
@@ -761,6 +794,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
+            Picking.innerHTML = `Sage`
             break;
         case "skye":
             infoAgentes.innerHTML =  `
@@ -795,6 +829,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Skye`
             break;
         case "sova":
             infoAgentes.innerHTML =  `
@@ -829,6 +864,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
+            Picking.innerHTML = `Sova`
             break;
         case "viper":
             infoAgentes.innerHTML =  `
@@ -863,6 +899,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
+            Picking.innerHTML = `Viper`
             break;
         case "yoru":
             infoAgentes.innerHTML =  `
@@ -897,6 +934,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
+            Picking.innerHTML = `Yoru`
             break;
         default:
             break;
@@ -906,7 +944,13 @@ function alterarContexto(contexto) {
 //Quando um agente for clicado, mostra o botão "CONFIRMAR"
 agentes.forEach(agente => {
     agente.addEventListener('click', () => {
-        btnConfirmar.style.display = 'block';
+        btnConfirmar.style.background = 'transparent'
+        btnConfirmar.style.backgroundColor = 'rgba(111, 255, 207, 0.4)'
+        textoConfirmar.style.margin = '0'
+        btnConfirmar.style.padding = '12px 40px'
+        selecionarAgente.play()
+
+        agenteSelecionado = agente.getAttribute('data-audio')
     });
 });
 
@@ -921,4 +965,11 @@ function desabilitarAgentes() {
 btnConfirmar.addEventListener('click', () => {
     btnConfirmar.style.display = 'none'
     desabilitarAgentes()
+    switch(agenteSelecionado){
+        case 'audio_killjoy':
+            lockKilljoy.play()
+            break;
+        default:
+            break;
+    }
 });

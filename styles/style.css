@@ -190,14 +190,17 @@ html {
 
 .btn__confirmar{
     position: fixed;
-    padding: 12px 40px;
+    padding: 12px 30px;
     font-family: var(--fonte-confirmar);
     font-size: 1.2em;
     color: #fff;
-    background: rgba(111, 255, 207, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
+    background: url('/images/cadeado.png') no-repeat left;
+    background-position-x: 15%;
+    background-size: 20px;
     border: 1px solid rgba(255, 255, 255, 0.27);
     bottom: 22%;
-    display: none;
+}
+
+.texto__confirmar{
+    margin-left: 1em;
 }
