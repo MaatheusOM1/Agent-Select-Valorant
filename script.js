@@ -43,7 +43,17 @@ const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
 const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
 const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
 // Sons dos LockIn
+const lockAstra = new Audio('/sounds/lock-in-astra.mp3')
+const lockBrimstone = new Audio('/sounds/lock-in-brimstone.mp3')
+const lockJett = new Audio('/sounds/lock-in-jett.mp3')
 const lockKilljoy = new Audio('/sounds/lock-in-killjoy.mp3')
+const lockOmen = new Audio('/sounds/lock-in-omen.mp3')
+const lockPhoenix = new Audio('/sounds/lock-in-phoenix.mp3')
+const lockRaze = new Audio('/sounds/lock-in-raze.mp3')
+const lockReyna = new Audio('/sounds/lock-in-reyna.mp3')
+const lockSage = new Audio('/sounds/lock-in-sage.mp3')
+const lockSkye = new Audio('/sounds/lock-in-skye.mp3')
+const lockSova = new Audio('/sounds/lock-in-sova.mp3')
 
 
 // Variável para o agente selecionado
@@ -966,8 +976,38 @@ btnConfirmar.addEventListener('click', () => {
     btnConfirmar.style.display = 'none'
     desabilitarAgentes()
     switch(agenteSelecionado){
+        case 'audio_astra':
+            lockAstra.play()
+            break;
+        case 'audio_brimstone':
+            lockBrimstone.play()
+            break;
+        case 'audio_jett':
+            lockJett.play()
+            break;
         case 'audio_killjoy':
             lockKilljoy.play()
+            break;
+        case 'audio_omen':
+            lockOmen.play()
+            break;
+        case 'audio_phoenix':
+            lockPhoenix.play()
+            break;
+        case 'audio_raze':
+            lockRaze.play()
+            break;
+        case 'audio_reyna':
+            lockReyna.play()
+            break;
+        case 'audio_sage':
+            lockSage.play()
+            break;
+        case 'audio_skye':
+            lockSkye.play()
+            break;
+        case 'audio_sova':
+            lockSova.play()
             break;
         default:
             break;
