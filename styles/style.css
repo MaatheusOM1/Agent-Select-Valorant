@@ -44,6 +44,10 @@ html {
     border: 1px solid white;
 }
 
+.agente:hover{
+    background-color: #fff;
+}
+
 .agente__foto{
     width: 100%;
     cursor: pointer;

@@ -42,6 +42,7 @@ const agentes = document.querySelectorAll('.agente'); //Variável de todos os ag
 const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
 const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
 const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
+const cliqueConfirmar = new Audio('/sounds/passar-mouse-em-confirmar.mp3')
 // Sons dos LockIn
 const lockAstra = new Audio('/sounds/lock-in-astra.mp3')
 const lockBrimstone = new Audio('/sounds/lock-in-brimstone.mp3')
@@ -953,6 +954,7 @@ function alterarContexto(contexto) {
 
 //Quando um agente for clicado, mostra o botão "CONFIRMAR"
 agentes.forEach(agente => {
+    tocarSomAgente()
     agente.addEventListener('click', () => {
         btnConfirmar.style.background = 'transparent'
         btnConfirmar.style.backgroundColor = 'rgba(111, 255, 207, 0.4)'
@@ -969,6 +971,14 @@ function desabilitarAgentes() {
     agentes.forEach(agente => {
         agente.style.pointerEvents = 'none'
     });
+}
+
+function tocarSomAgente(){
+    agentes.forEach(agente =>{
+        agente.addEventListener('mouseover', () => {
+            passarMouseAgente.play()
+        })
+    })
 }
 
 //Tira o botão após a confirmação de algum agente e puxa a função de desabilitar os agentes
@@ -1013,3 +1023,7 @@ btnConfirmar.addEventListener('click', () => {
             break;
     }
 });
+
+btnConfirmar.addEventListener('mouseover', () => {
+    cliqueConfirmar.play()
+})
