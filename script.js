@@ -322,7 +322,7 @@ function alterarContexto(contexto) {
             <div class="container__informacoes-agentes">
             <div class="linha__vertical"></div>
                 <h3 class="role__agente">Sentinela</h3>
-                <h1 class="nome__agente">CHYPER</h1>
+                <h1 class="nome__agente">CYPHER</h1>
                 <div class="container__skills">
                     <div class="role__agente-icone skills">
                         <p>INFO</p>
@@ -350,7 +350,7 @@ function alterarContexto(contexto) {
                 <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
-            Picking.innerHTML = `Chyper`
+            Picking.innerHTML = `Cypher`
             break;
         case "deadlock":
             infoAgentes.innerHTML =  `
