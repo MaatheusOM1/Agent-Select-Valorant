@@ -26,7 +26,7 @@ const yoru = document.querySelector('.yoru')
 //Declaração das variáveis para o timer
 const tempoNaTela = document.querySelector('#timer')
 let tempoDecorridoEmSegundos = 90
-
+let piscar = false
 
 const infoAgentes = document.querySelector('.container__wrap') // Variável para manipulação de DOM
 const agentePickado = document.querySelector('#agente__pickado') // Variável para mudar a foto de acordo com o agente
@@ -68,6 +68,7 @@ const contagemRegressiva = () => {
     }
     tempoDecorridoEmSegundos -= 1 //Tira um segundo do contador por vez
     mostrarTempo()
+    piscarCronometro()
 }
 
 //Função de Iniciar ou Pausar o cronômetro
@@ -79,7 +80,17 @@ function iniciarCronometro() {
 function mostrarTempo(){
     tempoNaTela.innerHTML = tempoDecorridoEmSegundos //Para aparecer o contador
 }
-
+ //Função para piscar o cronometro em vermelho quando o tempo tiver acabando
+function piscarCronometro() {
+    if (tempoDecorridoEmSegundos <= 9) {
+        piscar = !piscar;
+        if (piscar) {
+            tempoNaTela.style.color = 'red';
+        } else {
+            tempoNaTela.style.color = 'white';
+        }
+    }
+}
 mostrarTempo() //Puxa a função no escopo global para sempre aparecer o cronômetro na tela
 iniciarCronometro() //Puxa a função no escopo global para já começar o contador
 
@@ -952,6 +963,8 @@ function alterarContexto(contexto) {
     }
 }
 
+btnConfirmar.style.pointerEvents = 'none' //Para que ele nao toque som quando passar o mouse por cima, a menos que um agente esteja selecionado
+
 //Quando um agente for clicado, mostra o botão "CONFIRMAR"
 agentes.forEach(agente => {
     tocarSomAgente()
@@ -960,6 +973,7 @@ agentes.forEach(agente => {
         btnConfirmar.style.backgroundColor = 'rgba(111, 255, 207, 0.4)'
         textoConfirmar.style.margin = '0'
         btnConfirmar.style.padding = '12px 40px'
+        btnConfirmar.style.pointerEvents = 'all'
         selecionarAgente.play()
 
         agenteSelecionado = agente.getAttribute('data-audio')

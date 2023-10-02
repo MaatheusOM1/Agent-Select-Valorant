@@ -143,6 +143,7 @@ html {
     line-height: normal;
     margin: 1em 0 0 2em;
     position: fixed;
+    opacity: .7;
 }
 
 .timer__pick{
@@ -179,6 +180,10 @@ html {
     width: 25px;
     height: 25px;
     margin-right: .5em;
+}
+
+.texto__missao{
+    margin-top: -.1em;
 }
 
 .role__agente__foto{
