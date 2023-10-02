@@ -26,7 +26,6 @@ const yoru = document.querySelector('.yoru')
 //Declaração das variáveis para o timer
 const tempoNaTela = document.querySelector('#timer')
 let tempoDecorridoEmSegundos = 90
-let piscar = false
 
 const infoAgentes = document.querySelector('.container__wrap') // Variável para manipulação de DOM
 const agentePickado = document.querySelector('#agente__pickado') // Variável para mudar a foto de acordo com o agente
@@ -37,17 +36,32 @@ const btnConfirmar = document.querySelector('.btn__confirmar') // Variável do b
 const textoConfirmar = document.querySelector('.texto__confirmar')// Variável do texto do botão "CONFIRMAR"
 const agentes = document.querySelectorAll('.agente'); //Variável de todos os agentes
 
+// Variável para o agente selecionado
+let agenteSelecionado = null
+
+//Variável para o botao confirmar se ainda nao estiver clicado
+let btnConfirmarNaoClicado = true
 
 // Variáveis dos sons
 const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
 const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
 const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
 const cliqueConfirmar = new Audio('/sounds/passar-mouse-em-confirmar.mp3')
+const selecioneUmAgente = new Audio('/sounds/selecione-um-agente.mp3')
 // Sons dos LockIn
 const lockAstra = new Audio('/sounds/lock-in-astra.mp3')
-const lockBrimstone = new Audio('/sounds/lock-in-brimstone.mp3')
+const lockBreach = new Audio('/sounds/lock-in-breach.mp3')
+const lockBrimstone= new Audio('/sounds/lock-in-brimstone.mp3')
+const lockChamber = new Audio('/sounds/lock-in-chamber.mp3')
+const lockCypher = new Audio('/sounds/lock-in-cypher.mp3')
+const lockDeadlock = new Audio('/sounds/lock-in-deadlock.mp3')
+const lockFade= new Audio('/sounds/lock-in-fade.mp3')
+const lockGeeko = new Audio('/sounds/lock-in-geeko.mp3')
+const lockHarbor = new Audio('/sounds/lock-in-harbor.mp3')
 const lockJett = new Audio('/sounds/lock-in-jett.mp3')
+const lockKayo = new Audio('/sounds/lock-in-kayo.mp3')
 const lockKilljoy = new Audio('/sounds/lock-in-killjoy.mp3')
+const lockNeon = new Audio('/sounds/lock-in-neon.mp3')
 const lockOmen = new Audio('/sounds/lock-in-omen.mp3')
 const lockPhoenix = new Audio('/sounds/lock-in-phoenix.mp3')
 const lockRaze = new Audio('/sounds/lock-in-raze.mp3')
@@ -55,10 +69,9 @@ const lockReyna = new Audio('/sounds/lock-in-reyna.mp3')
 const lockSage = new Audio('/sounds/lock-in-sage.mp3')
 const lockSkye = new Audio('/sounds/lock-in-skye.mp3')
 const lockSova = new Audio('/sounds/lock-in-sova.mp3')
+const lockViper = new Audio('/sounds/lock-in-viper.mp3')
+const lockYoru = new Audio('/sounds/lock-in-yoru.mp3')
 
-
-// Variável para o agente selecionado
-let agenteSelecionado = null
 
 //Funções para o Contador
 //Função para a contagem regressiva do contador
@@ -68,6 +81,7 @@ const contagemRegressiva = () => {
     }
     tempoDecorridoEmSegundos -= 1 //Tira um segundo do contador por vez
     mostrarTempo()
+    somSelecioneUmAgente()
     piscarCronometro()
 }
 
@@ -80,14 +94,21 @@ function iniciarCronometro() {
 function mostrarTempo(){
     tempoNaTela.innerHTML = tempoDecorridoEmSegundos //Para aparecer o contador
 }
- //Função para piscar o cronometro em vermelho quando o tempo tiver acabando
+
+//Função para tocar o som se selecione um agente, apenas se o botao confirmar ainda nao tiver sido clicado e o tempo for igual ou menor que 11
+function somSelecioneUmAgente(){
+    if(btnConfirmarNaoClicado && tempoDecorridoEmSegundos == 11){
+        selecioneUmAgente.play()
+    }
+}
+
+ //Função para piscar o cronometro em vermelho quando o tempo tiver acabando a menos que o botao confirmar nao tenha sido clicado
 function piscarCronometro() {
-    if (tempoDecorridoEmSegundos <= 9) {
-        piscar = !piscar;
-        if (piscar) {
-            tempoNaTela.style.color = 'red';
-        } else {
+    if (tempoDecorridoEmSegundos == 10 && btnConfirmarNaoClicado) {
+        if (tempoNaTela === 'red') {
             tempoNaTela.style.color = 'white';
+        } else {
+            tempoNaTela.style.color = 'red';
         }
     }
 }
@@ -987,6 +1008,7 @@ function desabilitarAgentes() {
     });
 }
 
+//Função para tocar um som quando o mouse passar por cima da foto de algum agente
 function tocarSomAgente(){
     agentes.forEach(agente =>{
         agente.addEventListener('mouseover', () => {
@@ -995,22 +1017,50 @@ function tocarSomAgente(){
     })
 }
 
-//Tira o botão após a confirmação de algum agente e puxa a função de desabilitar os agentes
+//Tira o botão após a confirmação de algum agente, puxa a função de desabilitar os agentes e toca a fala de cada um
 btnConfirmar.addEventListener('click', () => {
-    btnConfirmar.style.display = 'none'
+    btnConfirmarNaoClicado = false //Deixa o botao como "false" para o contador nao ficar vermelho e nem tocar o som de selecione seu agente
+    btnConfirmar.style.display = 'none' //Tira o botao após ter sido clicado
     desabilitarAgentes()
-    switch(agenteSelecionado){
+    switch(agenteSelecionado){ //Tocar a fala de cada agente
         case 'audio_astra':
             lockAstra.play()
+            break;
+        case 'audio_breach':
+            lockBreach.play()
             break;
         case 'audio_brimstone':
             lockBrimstone.play()
             break;
+        case 'audio_chamber':
+            lockChamber.play()
+            break;
+        case 'audio_cypher':
+            lockCypher.play()
+            break;
+        case 'audio_deadlock':
+            lockDeadlock.play()
+            break;
+        case 'audio_fade':
+            lockFade.play()
+            break;
+        case 'audio_geeko':
+            lockGeeko.play()
+            break;
+        case 'audio_harbor':
+            lockHarbor.play()
+            break;
         case 'audio_jett':
             lockJett.play()
             break;
+        case 'audio_kayo':
+            lockKayo.play()
+            break;
         case 'audio_killjoy':
             lockKilljoy.play()
+            break;
+        case 'audio_neon':
+            lockNeon.play()
             break;
         case 'audio_omen':
             lockOmen.play()
@@ -1033,11 +1083,18 @@ btnConfirmar.addEventListener('click', () => {
         case 'audio_sova':
             lockSova.play()
             break;
+        case 'audio_viper':
+            lockViper.play()
+            break;
+        case 'audio_yoru':
+            lockYoru.play()
+            break;
         default:
             break;
     }
 });
 
+//Toca som do botao confirmar quando o mouse passar por cima
 btnConfirmar.addEventListener('mouseover', () => {
     cliqueConfirmar.play()
 })
