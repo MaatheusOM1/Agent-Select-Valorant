@@ -1010,62 +1010,67 @@ function alterarContexto(contexto) {
 }
 
 function atualizarInfoSkill(contexto, skill) {
+    if (skill === 'INFO'){
+        document.querySelector('.role__agente-icone').classList.add('active')
+        document.querySelector('.skill-c').classList.remove('active')
+        document.querySelector('.skill-q').classList.remove('active')
+        document.querySelector('.skill-e').classList.remove('active')
+        document.querySelector('.skill-x').classList.remove('active')
+    }
+    if (skill === 'C'){
+        document.querySelector('.role__agente-icone').classList.remove('active')
+        document.querySelector('.skill-c').classList.add('active')
+        document.querySelector('.skill-q').classList.remove('active')
+        document.querySelector('.skill-e').classList.remove('active')
+        document.querySelector('.skill-x').classList.remove('active')
+    }
+    if (skill === 'Q'){
+        document.querySelector('.role__agente-icone').classList.remove('active')
+        document.querySelector('.skill-c').classList.remove('active')
+        document.querySelector('.skill-q').classList.add('active')
+        document.querySelector('.skill-e').classList.remove('active')
+        document.querySelector('.skill-x').classList.remove('active')
+    }
+    if (skill === 'E'){
+        document.querySelector('.role__agente-icone').classList.remove('active')
+        document.querySelector('.skill-c').classList.remove('active')
+        document.querySelector('.skill-q').classList.remove('active')
+        document.querySelector('.skill-e').classList.add('active')
+        document.querySelector('.skill-x').classList.remove('active')
+    }
+    if (skill === 'X'){
+        document.querySelector('.role__agente-icone').classList.remove('active')
+        document.querySelector('.skill-c').classList.remove('active')
+        document.querySelector('.skill-q').classList.remove('active')
+        document.querySelector('.skill-e').classList.remove('active')
+        document.querySelector('.skill-x').classList.add('active')
+    }
     if (contexto === 'astra') {
         const infoAgente = document.querySelector('#atualizar-info__agente');
         const roleAgente = document.querySelector('#atualizar-role__agente');
         const infoRole = document.querySelector('#atualizar-info__role');
 
         if (skill === 'INFO'){
-            document.querySelector('.role__agente-icone').classList.add('active')
-            document.querySelector('.skill-c').classList.remove('active')
-            document.querySelector('.skill-q').classList.remove('active')
-            document.querySelector('.skill-e').classList.remove('active')
-            document.querySelector('.skill-x').classList.remove('active')
-
             infoAgente.innerHTML = `<p class="info__agente" id="atualizar-info__agente" id="testeinfoagente">Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>`
             roleAgente.innerHTML = `<b class="role__agente" id="atualizar-role__agente" id="testeroleagente">Controlador</b>`
             infoRole.innerHTML = `<p class="info__role" id="atualizar-info__role" id="testeinforole">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>`
         }
         if (skill === 'C') {
-            document.querySelector('.role__agente-icone').classList.remove('active')
-            document.querySelector('.skill-c').classList.add('active')
-            document.querySelector('.skill-q').classList.remove('active')
-            document.querySelector('.skill-e').classList.remove('active')
-            document.querySelector('.skill-x').classList.remove('active')
-
             infoAgente.textContent = "";
             roleAgente.innerHTML = `<b id="atualizar-role__agente">Pulso Nova</b>`;
             infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para detonar um Pulso Nova. O Pulso Nova carrega brevemente e depois estoura, causando concussão a todos os jogadores na área.</p>`;
         }
         if (skill === 'Q') {
-            document.querySelector('.role__agente-icone').classList.remove('active')
-            document.querySelector('.skill-c').classList.remove('active')
-            document.querySelector('.skill-q').classList.add('active')
-            document.querySelector('.skill-e').classList.remove('active')
-            document.querySelector('.skill-x').classList.remove('active')
-
             infoAgente.textContent = "";
             roleAgente.innerHTML = `<b id="atualizar-role__agente">Nebulosa</b>`;
             infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para transformá-la em uma Nebulosa (fumaça). USE uma Estrela para dissipá-la, retornando a Estrela para ser posicionada em um novo local após um período. Dissipar forma brevemente uma Nebulosa falsa na localização da Estrela antes de retornar.</p>`;
         }
         if (skill === 'E') {
-            document.querySelector('.role__agente-icone').classList.remove('active')
-            document.querySelector('.skill-c').classList.remove('active')
-            document.querySelector('.skill-q').classList.remove('active')
-            document.querySelector('.skill-e').classList.add('active')
-            document.querySelector('.skill-x').classList.remove('active')
-
             infoAgente.textContent = "";
             roleAgente.innerHTML = `<b id="atualizar-role__agente">Poço Gravitacional</b>`;
             infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para formar um Poço Gravitacional. Jogadores na área são puxados em direção ao centro antes de ele explodir, deixando frágeis todos que ainda estão presos no centro.</p>`;
         }
         if (skill === 'X') {
-            document.querySelector('.role__agente-icone').classList.remove('active')
-            document.querySelector('.skill-c').classList.remove('active')
-            document.querySelector('.skill-q').classList.remove('active')
-            document.querySelector('.skill-e').classList.remove('active')
-            document.querySelector('.skill-x').classList.add('active')
-
             infoAgente.textContent = "";
             roleAgente.innerHTML = `<b id="atualizar-role__agente">Forma Astral / Divisa Cósmica</b>`;
             infoRole.innerHTML = `<p id="atualizar-info__role">ATIVE para entrar na Forma Astral, em que você pode posicionar Estrelas com o DISPARO. As Estrelas podem ser reativadas depois para serem transformadas em Pulso Nova, Nebulosa ou Poço Gravitacional. Quando Divisa Cósmica estiver carregada, use o DISPARO ALTERNATIVO na Forma Astral para começar a mirar e, depois, o DISPARO para escolher dois locais. Uma Divisa Cósmica infinita surge e conecta os pontos selecionados. A Divisa Cósmica bloqueia disparos e abafa muito o som.</p>`;
