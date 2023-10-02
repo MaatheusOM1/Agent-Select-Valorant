@@ -213,3 +213,7 @@ html {
 .texto__confirmar{
     margin-left: 1em;
 }
+
+.active{
+    background: rgba(255, 255, 255, .4);
+}

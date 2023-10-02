@@ -73,6 +73,14 @@ const lockViper = new Audio('/sounds/lock-in-viper.mp3')
 const lockYoru = new Audio('/sounds/lock-in-yoru.mp3')
 
 
+
+
+
+
+
+
+
+
 //Funções para o Contador
 //Função para a contagem regressiva do contador
 const contagemRegressiva = () => { 
@@ -216,7 +224,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Controlador</h3>
                 <h1 class="nome__agente">ASTRA</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/controlador.png" alt="" class="skills__logo">
                     </div>
@@ -237,9 +245,9 @@ function alterarContexto(contexto) {
                         <img src="/images/astra x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>
-                <b class="role__agente">Controlador</b>
-                <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
+                <p class="info__agente" id="atualizar-info__agente">Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>
+                <b class="role__agente" id="atualizar-role__agente" id="testeroleagente">Controlador</b>
+                <p class="info__role" id="atualizar-info__role" id="testeinforole">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
             Picking.innerHTML = `Astra`
@@ -251,7 +259,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">BREACH</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -272,9 +280,9 @@ function alterarContexto(contexto) {
                         <img src="/images/breach x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Breach, o homem-biônico sueco, dispara poderosos jatos cinéticos para forçar a abertura de um caminho pelo território inimigo. O dano e a interrupção que ele causa garantem que nenhuma luta seja justa.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">Breach, o homem-biônico sueco, dispara poderosos jatos cinéticos para forçar a abertura de um caminho pelo território inimigo. O dano e a interrupção que ele causa garantem que nenhuma luta seja justa.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Breach`
@@ -286,7 +294,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Controlador</h3>
                 <h1 class="nome__agente">BRIMSTONE</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/controlador.png" alt="" class="skills__logo">
                     </div>
@@ -307,9 +315,9 @@ function alterarContexto(contexto) {
                         <img src="/images/brimstone x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Vindo diretamente dos EUA, o arsenal orbital do Brimstone garante que o esquadrão dele sempre esteja em vantagem. Sua capacidade de oferecer utilitários com precisão e segurança faz dele um comandante inigualável na linha de frente.</p>
-                <b class="role__agente">Controlador</b>
-                <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
+                <p class="info__agente" id="atualizar-info__agente">Vindo diretamente dos EUA, o arsenal orbital do Brimstone garante que o esquadrão dele sempre esteja em vantagem. Sua capacidade de oferecer utilitários com precisão e segurança faz dele um comandante inigualável na linha de frente.</p>
+                <b class="role__agente" id="atualizar-role__agente">Controlador</b>
+                <p class="info__role" id="atualizar-info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
             Picking.innerHTML = `Brimstone`
@@ -321,7 +329,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Sentinela</h3>
                 <h1 class="nome__agente">CHAMBER</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/sentinela.png" alt="" class="skills__logo">
                     </div>
@@ -342,9 +350,9 @@ function alterarContexto(contexto) {
                         <img src="/images/chamber x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Bem-vestido e armado até os dentes, o criador de armas francês Chamber coloca os inimigos para correr com precisão mortal. Use e abuse do arsenal personalizado dele para segurar posições e abater inimigos de longe, criando a defesa perfeita para qualquer plano.</p>
-                <b class="role__agente">Sentinela</b>
-                <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
+                <p class="info__agente" id="atualizar-info__agente">Bem-vestido e armado até os dentes, o criador de armas francês Chamber coloca os inimigos para correr com precisão mortal. Use e abuse do arsenal personalizado dele para segurar posições e abater inimigos de longe, criando a defesa perfeita para qualquer plano.</p>
+                <b class="role__agente" id="atualizar-role__agente">Sentinela</b>
+                <p class="info__role" id="atualizar-info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
             Picking.innerHTML = `Chamber`
@@ -356,7 +364,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Sentinela</h3>
                 <h1 class="nome__agente">CYPHER</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/sentinela.png" alt="" class="skills__logo">
                     </div>
@@ -377,9 +385,9 @@ function alterarContexto(contexto) {
                         <img src="/images/cypher x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Cypher, um vendedor de informações do Marrocos, é uma verdadeira rede de vigilância de um homem só que fica de olho em cada movimento dos inimigos. Nenhum segredo está a salvo. Nenhuma manobra passa despercebida. Cypher está sempre vigiando.</p>
-                <b class="role__agente">Sentinela</b>
-                <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
+                <p class="info__agente" id="atualizar-info__agente">Cypher, um vendedor de informações do Marrocos, é uma verdadeira rede de vigilância de um homem só que fica de olho em cada movimento dos inimigos. Nenhum segredo está a salvo. Nenhuma manobra passa despercebida. Cypher está sempre vigiando.</p>
+                <b class="role__agente" id="atualizar-role__agente">Sentinela</b>
+                <p class="info__role" id="atualizar-info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
             Picking.innerHTML = `Cypher`
@@ -391,7 +399,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Sentinela</h3>
                 <h1 class="nome__agente">DEADLOCK</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/sentinela.png" alt="" class="skills__logo">
                     </div>
@@ -412,9 +420,9 @@ function alterarContexto(contexto) {
                         <img src="/images/deadlock x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">A agente norueguesa Deadlock posiciona uma gama de nanofios de alta tecnologia para proteger o campo de batalha até mesmo do ataque mais letal. Ninguém escapa do seu olhar vigilante. Ninguém sobrevive à sua ferocidade implacável.</p>
-                <b class="role__agente">Sentinela</b>
-                <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
+                <p class="info__agente" id="atualizar-info__agente">A agente norueguesa Deadlock posiciona uma gama de nanofios de alta tecnologia para proteger o campo de batalha até mesmo do ataque mais letal. Ninguém escapa do seu olhar vigilante. Ninguém sobrevive à sua ferocidade implacável.</p>
+                <b class="role__agente" id="atualizar-role__agente">Sentinela</b>
+                <p class="info__role" id="atualizar-info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
             Picking.innerHTML = `Deadlock`
@@ -426,7 +434,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">fade</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -447,9 +455,9 @@ function alterarContexto(contexto) {
                         <img src="/images/fade x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Fade, uma caçadora de recompensas turca, usa o poder dos pesadelos para capturar os segredos dos inimigos. Personificando o próprio terror, ela persegue os alvos e revela seus medos mais profundos para, depois, destruí-los na escuridão.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">Fade, uma caçadora de recompensas turca, usa o poder dos pesadelos para capturar os segredos dos inimigos. Personificando o próprio terror, ela persegue os alvos e revela seus medos mais profundos para, depois, destruí-los na escuridão.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Fade`
@@ -461,7 +469,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">geeko</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -482,9 +490,9 @@ function alterarContexto(contexto) {
                         <img src="/images/geeko x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Gekko, de Los Angeles, lidera um grupo muito unido de criaturas caóticas. Seus amigos atropelam tudo, tirando os inimigos do caminho. Depois, Gekko corre atrás deles para reagrupá-los e reiniciar o processo.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">Gekko, de Los Angeles, lidera um grupo muito unido de criaturas caóticas. Seus amigos atropelam tudo, tirando os inimigos do caminho. Depois, Gekko corre atrás deles para reagrupá-los e reiniciar o processo.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Geeko`
@@ -496,7 +504,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Controlador</h3>
                 <h1 class="nome__agente">harbor</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/controlador.png" alt="" class="skills__logo">
                     </div>
@@ -517,9 +525,9 @@ function alterarContexto(contexto) {
                         <img src="/images/harbor x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Vindo do litoral indiano, Harbor entra em campo com a força da tormenta, empunhando tecnologia ancestral com domínio sobre a água. Ele libera corredeiras espumantes e ondas esmagadoras para proteger seus aliados ou atacar aqueles que se opõem a ele.</p>
-                <b class="role__agente">Controlador</b>
-                <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
+                <p class="info__agente" id="atualizar-info__agente">Vindo do litoral indiano, Harbor entra em campo com a força da tormenta, empunhando tecnologia ancestral com domínio sobre a água. Ele libera corredeiras espumantes e ondas esmagadoras para proteger seus aliados ou atacar aqueles que se opõem a ele.</p>
+                <b class="role__agente" id="atualizar-role__agente">Controlador</b>
+                <p class="info__role" id="atualizar-info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
             Picking.innerHTML = `Harbor`
@@ -531,7 +539,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">jett</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -552,9 +560,9 @@ function alterarContexto(contexto) {
                         <img src="/images/jett x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Jett`
@@ -566,7 +574,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">kay/o</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -587,9 +595,9 @@ function alterarContexto(contexto) {
                         <img src="/images/kayo x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">KAY/O é uma máquina de guerra construída com um único propósito: neutralizar Radiantes. Ele é capaz de Suprimir habilidades inimigas, anulando a capacidade de contra-ataque dos adversários e dando a si e a seus aliados uma vantagem essencial em combate.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">KAY/O é uma máquina de guerra construída com um único propósito: neutralizar Radiantes. Ele é capaz de Suprimir habilidades inimigas, anulando a capacidade de contra-ataque dos adversários e dando a si e a seus aliados uma vantagem essencial em combate.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Kay/o`
@@ -601,7 +609,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Sentinela</h3>
                 <h1 class="nome__agente">killjoy</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/sentinela.png" alt="" class="skills__logo">
                     </div>
@@ -622,9 +630,9 @@ function alterarContexto(contexto) {
                         <img src="/images/killjoy x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Killjoy, uma alemã genial, defende posições-chave no campo de batalha facilmente com seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs darão conta do recado.</p>
-                <b class="role__agente">Sentinela</b>
-                <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
+                <p class="info__agente" id="atualizar-info__agente">Killjoy, uma alemã genial, defende posições-chave no campo de batalha facilmente com seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs darão conta do recado.</p>
+                <b class="role__agente" id="atualizar-role__agente">Sentinela</b>
+                <p class="info__role" id="atualizar-info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
             Picking.innerHTML = `Killjoy`
@@ -636,7 +644,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">neon</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -657,9 +665,9 @@ function alterarContexto(contexto) {
                         <img src="/images/neon x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Neon, nossa Agente filipina, avança em velocidades incríveis, descarregando surtos de radiância bioelétrica tão rapidamente quanto seu corpo consegue gerá-los. Ela corre à frente para pegar os inimigos de surpresa, abatendo-os mais rápido do que um raio.</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Neon, nossa Agente filipina, avança em velocidades incríveis, descarregando surtos de radiância bioelétrica tão rapidamente quanto seu corpo consegue gerá-los. Ela corre à frente para pegar os inimigos de surpresa, abatendo-os mais rápido do que um raio.</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Neon`
@@ -671,7 +679,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Controlador</h3>
                 <h1 class="nome__agente">omen</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/controlador.png" alt="" class="skills__logo">
                     </div>
@@ -692,9 +700,9 @@ function alterarContexto(contexto) {
                         <img src="/images/omen x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Omen, uma lembrança fantasmagórica, caça nas sombras. Ele cega os inimigos, teleporta-se pelo campo e deixa a paranoia assumir o controle enquanto o adversário tenta descobrir de onde virá seu próximo ataque.</p>
-                <b class="role__agente">Controlador</b>
-                <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
+                <p class="info__agente" id="atualizar-info__agente">Omen, uma lembrança fantasmagórica, caça nas sombras. Ele cega os inimigos, teleporta-se pelo campo e deixa a paranoia assumir o controle enquanto o adversário tenta descobrir de onde virá seu próximo ataque.</p>
+                <b class="role__agente" id="atualizar-role__agente">Controlador</b>
+                <p class="info__role" id="atualizar-info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
             Picking.innerHTML = `Omen`
@@ -706,7 +714,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">phoenix</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -727,9 +735,9 @@ function alterarContexto(contexto) {
                         <img src="/images/phoenix x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Chegando com tudo diretamente do Reino Unido, o poder estelar de Phoenix reluz em seu estilo de luta, incendiando o campo de batalha com luz e estilo. Tendo ajuda ou não, ele entra na luta como e quando achar que deve.</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Chegando com tudo diretamente do Reino Unido, o poder estelar de Phoenix reluz em seu estilo de luta, incendiando o campo de batalha com luz e estilo. Tendo ajuda ou não, ele entra na luta como e quando achar que deve.</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Phoenix`
@@ -741,7 +749,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">raze</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -762,9 +770,9 @@ function alterarContexto(contexto) {
                         <img src="/images/raze x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Raze chega do Brasil com uma explosão de carisma e armas enormes. Com seu estilo de jogo "porradeiro", ela é craque em desentocar inimigos entrincheirados e limpar espaços apertados com uma bela dose de BUUUM!</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Raze chega do Brasil com uma explosão de carisma e armas enormes. Com seu estilo de jogo "porradeiro", ela é craque em desentocar inimigos entrincheirados e limpar espaços apertados com uma bela dose de BUUUM!</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Raze`
@@ -776,7 +784,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">reyna</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -797,9 +805,9 @@ function alterarContexto(contexto) {
                         <img src="/images/reyna x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Criada no coração do México, Reyna domina o combate individual, destacando-se a cada abate efetuado. Sua capacidade só é limitada por sua própria perícia, tornando-a bastante dependente de desempenho.</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Criada no coração do México, Reyna domina o combate individual, destacando-se a cada abate efetuado. Sua capacidade só é limitada por sua própria perícia, tornando-a bastante dependente de desempenho.</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Reyna`
@@ -811,7 +819,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Sentinela</h3>
                 <h1 class="nome__agente">sage</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/sentinela.png" alt="" class="skills__logo">
                     </div>
@@ -832,9 +840,9 @@ function alterarContexto(contexto) {
                         <img src="/images/sage x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Como uma verdadeira fortaleza chinesa, Sage traz segurança para si mesma e para a equipe aonde quer que vá. Capaz de reviver aliados e rechaçar investidas agressivas, ela oferece um centro de calmaria em meio ao caos da batalha.</p>
-                <b class="role__agente">Sentinela</b>
-                <p class="info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
+                <p class="info__agente" id="atualizar-info__agente">Como uma verdadeira fortaleza chinesa, Sage traz segurança para si mesma e para a equipe aonde quer que vá. Capaz de reviver aliados e rechaçar investidas agressivas, ela oferece um centro de calmaria em meio ao caos da batalha.</p>
+                <b class="role__agente" id="atualizar-role__agente">Sentinela</b>
+                <p class="info__role" id="atualizar-info__role">Sentinelas são especialistas em defesa que podem bloquear áreas e vigiar flancos, tanto nas rodadas de ataque, quanto nas de defesa.</p>
             </div>
             `
             Picking.innerHTML = `Sage`
@@ -846,7 +854,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">skye</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -867,9 +875,9 @@ function alterarContexto(contexto) {
                         <img src="/images/skye x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Mandando um salve direto da Austrália, Skye e sua equipe de feras desbravam territórios hostis. Com seus poderes de cura e suas criações que partem pra cima dos inimigos, qualquer equipe ficará mais forte e mais segura tendo Skye como aliada.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">Mandando um salve direto da Austrália, Skye e sua equipe de feras desbravam territórios hostis. Com seus poderes de cura e suas criações que partem pra cima dos inimigos, qualquer equipe ficará mais forte e mais segura tendo Skye como aliada.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Skye`
@@ -881,7 +889,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Iniciador</h3>
                 <h1 class="nome__agente">sova</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/iniciador.png" alt="" class="skills__logo">
                     </div>
@@ -902,9 +910,9 @@ function alterarContexto(contexto) {
                         <img src="/images/sova x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Nascido sob o eterno inverno das tundras russas, Sova rastreia, encontra e elimina inimigos com eficiência e precisão implacáveis. Seu arco personalizado e suas habilidades inigualáveis de reconhecimento garantem que nenhuma presa escape.</p>
-                <b class="role__agente">Iniciador</b>
-                <p class="info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
+                <p class="info__agente" id="atualizar-info__agente">Nascido sob o eterno inverno das tundras russas, Sova rastreia, encontra e elimina inimigos com eficiência e precisão implacáveis. Seu arco personalizado e suas habilidades inigualáveis de reconhecimento garantem que nenhuma presa escape.</p>
+                <b class="role__agente" id="atualizar-role__agente">Iniciador</b>
+                <p class="info__role" id="atualizar-info__role">Iniciadores desafiam situações arriscadas, preparando a equipe para entrar em terreno contestado e rechaçar defensores.</p>
             </div>
             `
             Picking.innerHTML = `Sova`
@@ -916,7 +924,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Controlador</h3>
                 <h1 class="nome__agente">viper</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/controlador.png" alt="" class="skills__logo">
                     </div>
@@ -937,9 +945,9 @@ function alterarContexto(contexto) {
                         <img src="/images/viper x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Viper, a química dos Estados Unidos, emprega uma variedade de dispositivos químicos venenosos para controlar o campo de batalha e prejudicar a visão do inimigo. Se as toxinas não matarem a presa, seus jogos mentais certamente o farão.</p>
-                <b class="role__agente">Controlador</b>
-                <p class="info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
+                <p class="info__agente" id="atualizar-info__agente">Viper, a química dos Estados Unidos, emprega uma variedade de dispositivos químicos venenosos para controlar o campo de batalha e prejudicar a visão do inimigo. Se as toxinas não matarem a presa, seus jogos mentais certamente o farão.</p>
+                <b class="role__agente" id="atualizar-role__agente">Controlador</b>
+                <p class="info__role" id="atualizar-info__role">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>
             </div>
             `
             Picking.innerHTML = `Viper`
@@ -951,7 +959,7 @@ function alterarContexto(contexto) {
                 <h3 class="role__agente">Duelista</h3>
                 <h1 class="nome__agente">yoru</h1>
                 <div class="container__skills">
-                    <div class="role__agente-icone skills">
+                    <div class="role__agente-icone skills active">
                         <p>INFO</p>
                         <img src="/images/duelista.png" alt="" class="skills__logo">
                     </div>
@@ -972,9 +980,9 @@ function alterarContexto(contexto) {
                         <img src="/images/yoru x.png" alt="" class="skills__logo">
                     </div>
                 </div>
-                <p class="info__agente">Yoru, nativo do Japão, abre fendas na realidade para infiltrar as linhas inimigas sem ser visto. Ele usa tanto artimanhas quanto táticas agressivas, e os alvos são abatidos sem saber de onde o ataque veio.</p>
-                <b class="role__agente">Duelista</b>
-                <p class="info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
+                <p class="info__agente" id="atualizar-info__agente">Yoru, nativo do Japão, abre fendas na realidade para infiltrar as linhas inimigas sem ser visto. Ele usa tanto artimanhas quanto táticas agressivas, e os alvos são abatidos sem saber de onde o ataque veio.</p>
+                <b class="role__agente" id="atualizar-role__agente">Duelista</b>
+                <p class="info__role" id="atualizar-info__role">Duelistas são abatedores independentes que estão sempre prontos para o confronto. Eles usam habilidades e perícia para conseguir vários abates.</p>
             </div>
             `
             Picking.innerHTML = `Yoru`
@@ -982,7 +990,89 @@ function alterarContexto(contexto) {
         default:
             break;
     }
+
+
+    document.querySelector('.role__agente-icone').addEventListener('click', () =>{
+        atualizarInfoSkill(contexto, 'INFO')
+    })
+    document.querySelector('.skill-c').addEventListener('click', () =>{
+        atualizarInfoSkill(contexto, 'C')
+    })
+    document.querySelector('.skill-q').addEventListener('click', () =>{
+        atualizarInfoSkill(contexto, 'Q')
+    })
+    document.querySelector('.skill-e').addEventListener('click', () =>{
+        atualizarInfoSkill(contexto, 'E')
+    })
+    document.querySelector('.skill-x').addEventListener('click', () =>{
+        atualizarInfoSkill(contexto, 'X')
+    })
 }
+
+function atualizarInfoSkill(contexto, skill) {
+    if (contexto === 'astra') {
+        const infoAgente = document.querySelector('#atualizar-info__agente');
+        const roleAgente = document.querySelector('#atualizar-role__agente');
+        const infoRole = document.querySelector('#atualizar-info__role');
+
+        if (skill === 'INFO'){
+            document.querySelector('.role__agente-icone').classList.add('active')
+            document.querySelector('.skill-c').classList.remove('active')
+            document.querySelector('.skill-q').classList.remove('active')
+            document.querySelector('.skill-e').classList.remove('active')
+            document.querySelector('.skill-x').classList.remove('active')
+
+            infoAgente.innerHTML = `<p class="info__agente" id="atualizar-info__agente" id="testeinfoagente">Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>`
+            roleAgente.innerHTML = `<b class="role__agente" id="atualizar-role__agente" id="testeroleagente">Controlador</b>`
+            infoRole.innerHTML = `<p class="info__role" id="atualizar-info__role" id="testeinforole">Controladores se dedicam a dissecar territórios perigosos e pavimentar o caminho do sucesso para a equipe.</p>`
+        }
+        if (skill === 'C') {
+            document.querySelector('.role__agente-icone').classList.remove('active')
+            document.querySelector('.skill-c').classList.add('active')
+            document.querySelector('.skill-q').classList.remove('active')
+            document.querySelector('.skill-e').classList.remove('active')
+            document.querySelector('.skill-x').classList.remove('active')
+
+            infoAgente.textContent = "";
+            roleAgente.innerHTML = `<b id="atualizar-role__agente">Pulso Nova</b>`;
+            infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para detonar um Pulso Nova. O Pulso Nova carrega brevemente e depois estoura, causando concussão a todos os jogadores na área.</p>`;
+        }
+        if (skill === 'Q') {
+            document.querySelector('.role__agente-icone').classList.remove('active')
+            document.querySelector('.skill-c').classList.remove('active')
+            document.querySelector('.skill-q').classList.add('active')
+            document.querySelector('.skill-e').classList.remove('active')
+            document.querySelector('.skill-x').classList.remove('active')
+
+            infoAgente.textContent = "";
+            roleAgente.innerHTML = `<b id="atualizar-role__agente">Nebulosa</b>`;
+            infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para transformá-la em uma Nebulosa (fumaça). USE uma Estrela para dissipá-la, retornando a Estrela para ser posicionada em um novo local após um período. Dissipar forma brevemente uma Nebulosa falsa na localização da Estrela antes de retornar.</p>`;
+        }
+        if (skill === 'E') {
+            document.querySelector('.role__agente-icone').classList.remove('active')
+            document.querySelector('.skill-c').classList.remove('active')
+            document.querySelector('.skill-q').classList.remove('active')
+            document.querySelector('.skill-e').classList.add('active')
+            document.querySelector('.skill-x').classList.remove('active')
+
+            infoAgente.textContent = "";
+            roleAgente.innerHTML = `<b id="atualizar-role__agente">Poço Gravitacional</b>`;
+            infoRole.innerHTML = `<p id="atualizar-info__role">Posicione Estrelas na Forma Astral (Tecla da Ultimate) ATIVE uma Estrela para formar um Poço Gravitacional. Jogadores na área são puxados em direção ao centro antes de ele explodir, deixando frágeis todos que ainda estão presos no centro.</p>`;
+        }
+        if (skill === 'X') {
+            document.querySelector('.role__agente-icone').classList.remove('active')
+            document.querySelector('.skill-c').classList.remove('active')
+            document.querySelector('.skill-q').classList.remove('active')
+            document.querySelector('.skill-e').classList.remove('active')
+            document.querySelector('.skill-x').classList.add('active')
+
+            infoAgente.textContent = "";
+            roleAgente.innerHTML = `<b id="atualizar-role__agente">Forma Astral / Divisa Cósmica</b>`;
+            infoRole.innerHTML = `<p id="atualizar-info__role">ATIVE para entrar na Forma Astral, em que você pode posicionar Estrelas com o DISPARO. As Estrelas podem ser reativadas depois para serem transformadas em Pulso Nova, Nebulosa ou Poço Gravitacional. Quando Divisa Cósmica estiver carregada, use o DISPARO ALTERNATIVO na Forma Astral para começar a mirar e, depois, o DISPARO para escolher dois locais. Uma Divisa Cósmica infinita surge e conecta os pontos selecionados. A Divisa Cósmica bloqueia disparos e abafa muito o som.</p>`;
+        }
+    }
+}
+
 
 btnConfirmar.style.pointerEvents = 'none' //Para que ele nao toque som quando passar o mouse por cima, a menos que um agente esteja selecionado
 
