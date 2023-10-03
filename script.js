@@ -1,4 +1,4 @@
-// Declaração das variáveis de cada agente
+//Declaração das variáveis de cada agente
 const astra = document.querySelector('.astra')
 const breach = document.querySelector('.breach')
 const brimstone = document.querySelector('.brimstone')
@@ -27,28 +27,28 @@ const yoru = document.querySelector('.yoru')
 const tempoNaTela = document.querySelector('#timer')
 let tempoDecorridoEmSegundos = 90
 
-const infoAgentes = document.querySelector('.container__wrap') // Variável para manipulação de DOM
-const agentePickado = document.querySelector('#agente__pickado') // Variável para mudar a foto de acordo com o agente
-const Picking = document.querySelector('.picking') // Variável para trocar o nome de acordo com o pick
+const infoAgentes = document.querySelector('.container__wrap') //Variável para manipulação de DOM
+const agentePickado = document.querySelector('#agente__pickado') //Variável para mudar a foto de acordo com o agente
+const Picking = document.querySelector('.picking') //Variável para trocar o nome de acordo com o pick
 
 
-const btnConfirmar = document.querySelector('.btn__confirmar') // Variável do botão "CONFIRMAR"
-const textoConfirmar = document.querySelector('.texto__confirmar')// Variável do texto do botão "CONFIRMAR"
+const btnConfirmar = document.querySelector('.btn__confirmar') //Variável do botão "CONFIRMAR"
+const textoConfirmar = document.querySelector('.texto__confirmar')//Variável do texto do botão "CONFIRMAR"
 const agentes = document.querySelectorAll('.agente'); //Variável de todos os agentes
 
-// Variável para o agente selecionado
+//Variável para o agente selecionado
 let agenteSelecionado = null
 
 //Variável para o botao confirmar se ainda nao estiver clicado
 let btnConfirmarNaoClicado = true
 
-// Variáveis dos sons
+//Variáveis dos sons
 const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
 const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
 const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
 const cliqueConfirmar = new Audio('/sounds/passar-mouse-em-confirmar.mp3')
 const selecioneUmAgente = new Audio('/sounds/selecione-um-agente.mp3')
-// Sons dos LockIn
+//Sons dos agentes quando os confirma
 const lockAstra = new Audio('/sounds/lock-in-astra.mp3')
 const lockBreach = new Audio('/sounds/lock-in-breach.mp3')
 const lockBrimstone= new Audio('/sounds/lock-in-brimstone.mp3')
@@ -205,7 +205,7 @@ yoru.addEventListener('click', () => {
     alterarContexto('yoru')
 })
 
-//Funcção para alterar o texto de acordo com o agente clicado
+//Função para alterar o texto de acordo com o agente clicado
 function alterarContexto(contexto) {
     agentePickado.setAttribute('src', `./images/${contexto}.png`)//Trocar a foto de acordo com a página
     switch (contexto) { //Trocar o texto de acordo com a página
@@ -1001,6 +1001,7 @@ function alterarContexto(contexto) {
     })
 }
 
+//Função para mudar a escrita de cada skill de acordo com o agente selecionado
 function atualizarInfoSkill(contexto, skill) {
     if (skill === 'INFO'){
         document.querySelector('.role__agente-icone').classList.add('active')
