@@ -14,7 +14,7 @@
 }
 
 html {
-    background: url("/images/fundo.png") no-repeat;
+    background: url("../images/fundo.png") no-repeat;
     background-size: cover;
 }
 
@@ -203,7 +203,7 @@ html {
     font-family: var(--fonte-confirmar);
     font-size: 1.2em;
     color: #fff;
-    background: url('/images/cadeado.png') no-repeat left;
+    background: url('../images/cadeado.png') no-repeat left;
     background-position-x: 15%;
     background-size: 20px;
     border: 1px solid rgba(255, 255, 255, 0.27);

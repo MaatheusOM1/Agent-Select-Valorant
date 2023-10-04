@@ -22,7 +22,6 @@ const sova = document.querySelector('.sova')
 const viper = document.querySelector('.viper')
 const yoru = document.querySelector('.yoru')
 
-
 //Declaração das variáveis para o timer
 const tempoNaTela = document.querySelector('#timer')
 let tempoDecorridoEmSegundos = 90
@@ -30,7 +29,6 @@ let tempoDecorridoEmSegundos = 90
 const infoAgentes = document.querySelector('.container__wrap') //Variável para manipulação de DOM
 const agentePickado = document.querySelector('#agente__pickado') //Variável para mudar a foto de acordo com o agente
 const Picking = document.querySelector('.picking') //Variável para trocar o nome de acordo com o pick
-
 
 const btnConfirmar = document.querySelector('.btn__confirmar') //Variável do botão "CONFIRMAR"
 const textoConfirmar = document.querySelector('.texto__confirmar')//Variável do texto do botão "CONFIRMAR"
@@ -43,34 +41,34 @@ let agenteSelecionado = null
 let btnConfirmarNaoClicado = true
 
 //Variáveis dos sons
-const selecionarAgente = new Audio('/sounds/selecionar-agente.mp3')
-const passarMouseAgente = new Audio('/sounds/passar-mouse-em-agentes.mp3')
-const cliqueSkills = new Audio('/sounds/clique-nas-skills.mp3')
-const cliqueConfirmar = new Audio('/sounds/passar-mouse-em-confirmar.mp3')
-const selecioneUmAgente = new Audio('/sounds/selecione-um-agente.mp3')
+const selecionarAgente = new Audio('./sounds/selecionar-agente.mp3')
+const passarMouseAgente = new Audio('./sounds/passar-mouse-em-agentes.mp3')
+const cliqueSkills = new Audio('./sounds/clique-nas-skills.mp3')
+const cliqueConfirmar = new Audio('./sounds/passar-mouse-em-confirmar.mp3')
+const selecioneUmAgente = new Audio('./sounds/selecione-um-agente.mp3')
 //Sons dos agentes quando os confirma
-const lockAstra = new Audio('/sounds/lock-in-astra.mp3')
-const lockBreach = new Audio('/sounds/lock-in-breach.mp3')
-const lockBrimstone= new Audio('/sounds/lock-in-brimstone.mp3')
-const lockChamber = new Audio('/sounds/lock-in-chamber.mp3')
-const lockCypher = new Audio('/sounds/lock-in-cypher.mp3')
-const lockDeadlock = new Audio('/sounds/lock-in-deadlock.mp3')
-const lockFade= new Audio('/sounds/lock-in-fade.mp3')
-const lockGeeko = new Audio('/sounds/lock-in-geeko.mp3')
-const lockHarbor = new Audio('/sounds/lock-in-harbor.mp3')
-const lockJett = new Audio('/sounds/lock-in-jett.mp3')
-const lockKayo = new Audio('/sounds/lock-in-kayo.mp3')
-const lockKilljoy = new Audio('/sounds/lock-in-killjoy.mp3')
-const lockNeon = new Audio('/sounds/lock-in-neon.mp3')
-const lockOmen = new Audio('/sounds/lock-in-omen.mp3')
-const lockPhoenix = new Audio('/sounds/lock-in-phoenix.mp3')
-const lockRaze = new Audio('/sounds/lock-in-raze.mp3')
-const lockReyna = new Audio('/sounds/lock-in-reyna.mp3')
-const lockSage = new Audio('/sounds/lock-in-sage.mp3')
-const lockSkye = new Audio('/sounds/lock-in-skye.mp3')
-const lockSova = new Audio('/sounds/lock-in-sova.mp3')
-const lockViper = new Audio('/sounds/lock-in-viper.mp3')
-const lockYoru = new Audio('/sounds/lock-in-yoru.mp3')
+const lockAstra = new Audio('./sounds/lock-in-astra.mp3')
+const lockBreach = new Audio('./sounds/lock-in-breach.mp3')
+const lockBrimstone= new Audio('./sounds/lock-in-brimstone.mp3')
+const lockChamber = new Audio('./sounds/lock-in-chamber.mp3')
+const lockCypher = new Audio('./sounds/lock-in-cypher.mp3')
+const lockDeadlock = new Audio('./sounds/lock-in-deadlock.mp3')
+const lockFade= new Audio('./sounds/lock-in-fade.mp3')
+const lockGeeko = new Audio('./sounds/lock-in-geeko.mp3')
+const lockHarbor = new Audio('./sounds/lock-in-harbor.mp3')
+const lockJett = new Audio('./sounds/lock-in-jett.mp3')
+const lockKayo = new Audio('./sounds/lock-in-kayo.mp3')
+const lockKilljoy = new Audio('./sounds/lock-in-killjoy.mp3')
+const lockNeon = new Audio('./sounds/lock-in-neon.mp3')
+const lockOmen = new Audio('./sounds/lock-in-omen.mp3')
+const lockPhoenix = new Audio('./sounds/lock-in-phoenix.mp3')
+const lockRaze = new Audio('./sounds/lock-in-raze.mp3')
+const lockReyna = new Audio('./sounds/lock-in-reyna.mp3')
+const lockSage = new Audio('./sounds/lock-in-sage.mp3')
+const lockSkye = new Audio('./sounds/lock-in-skye.mp3')
+const lockSova = new Audio('./sounds/lock-in-sova.mp3')
+const lockViper = new Audio('./sounds/lock-in-viper.mp3')
+const lockYoru = new Audio('./sounds/lock-in-yoru.mp3')
 
 
 //Funções para o Contador
@@ -218,23 +216,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/controlador.png" alt="" class="skills__logo">
+                        <img src="./images/controlador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/astra c.png" alt="" class="skills__logo">
+                        <img src="./images/astra c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/astra q.png" alt="" class="skills__logo">
+                        <img src="./images/astra q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/astra e.png" alt="" class="skills__logo">
+                        <img src="./images/astra e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/astra x.png" alt="" class="skills__logo">
+                        <img src="./images/astra x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Astra, a Agente ganense, utiliza energias cósmicas para moldar o campo de batalha a seu bel-prazer. Com total domínio da sua forma astral e um talento estratégico nato, ela está sempre anos-luz à frente dos inimigos.</p>
@@ -253,23 +251,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/breach c.png" alt="" class="skills__logo">
+                        <img src="./images/breach c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/breach q.png" alt="" class="skills__logo">
+                        <img src="./images/breach q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/breach e.png" alt="" class="skills__logo">
+                        <img src="./images/breach e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/breach x.png" alt="" class="skills__logo">
+                        <img src="./images/breach x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Breach, o homem-biônico sueco, dispara poderosos jatos cinéticos para forçar a abertura de um caminho pelo território inimigo. O dano e a interrupção que ele causa garantem que nenhuma luta seja justa.</p>
@@ -288,23 +286,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/controlador.png" alt="" class="skills__logo">
+                        <img src="./images/controlador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/brimstone c.png" alt="" class="skills__logo">
+                        <img src="./images/brimstone c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/brimstone q.png" alt="" class="skills__logo">
+                        <img src="./images/brimstone q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/brimstone e.png" alt="" class="skills__logo">
+                        <img src="./images/brimstone e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/brimstone x.png" alt="" class="skills__logo">
+                        <img src="./images/brimstone x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Vindo diretamente dos EUA, o arsenal orbital do Brimstone garante que o esquadrão dele sempre esteja em vantagem. Sua capacidade de oferecer utilitários com precisão e segurança faz dele um comandante inigualável na linha de frente.</p>
@@ -323,23 +321,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/sentinela.png" alt="" class="skills__logo">
+                        <img src="./images/sentinela.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/chamber c.png" alt="" class="skills__logo">
+                        <img src="./images/chamber c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/chamber q.png" alt="" class="skills__logo">
+                        <img src="./images/chamber q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/chamber e.png" alt="" class="skills__logo">
+                        <img src="./images/chamber e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/chamber x.png" alt="" class="skills__logo">
+                        <img src="./images/chamber x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Bem-vestido e armado até os dentes, o criador de armas francês Chamber coloca os inimigos para correr com precisão mortal. Use e abuse do arsenal personalizado dele para segurar posições e abater inimigos de longe, criando a defesa perfeita para qualquer plano.</p>
@@ -358,23 +356,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/sentinela.png" alt="" class="skills__logo">
+                        <img src="./images/sentinela.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/cypher c.png" alt="" class="skills__logo">
+                        <img src="./images/cypher c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/cypher q.png" alt="" class="skills__logo">
+                        <img src="./images/cypher q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/cypher e.png" alt="" class="skills__logo">
+                        <img src="./images/cypher e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/cypher x.png" alt="" class="skills__logo">
+                        <img src="./images/cypher x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Cypher, um vendedor de informações do Marrocos, é uma verdadeira rede de vigilância de um homem só que fica de olho em cada movimento dos inimigos. Nenhum segredo está a salvo. Nenhuma manobra passa despercebida. Cypher está sempre vigiando.</p>
@@ -393,23 +391,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/sentinela.png" alt="" class="skills__logo">
+                        <img src="./images/sentinela.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/deadlock c.png" alt="" class="skills__logo">
+                        <img src="./images/deadlock c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/deadlock q.png" alt="" class="skills__logo">
+                        <img src="./images/deadlock q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/deadlock e.png" alt="" class="skills__logo">
+                        <img src="./images/deadlock e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/deadlock x.png" alt="" class="skills__logo">
+                        <img src="./images/deadlock x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">A agente norueguesa Deadlock posiciona uma gama de nanofios de alta tecnologia para proteger o campo de batalha até mesmo do ataque mais letal. Ninguém escapa do seu olhar vigilante. Ninguém sobrevive à sua ferocidade implacável.</p>
@@ -428,23 +426,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/fade c.png" alt="" class="skills__logo">
+                        <img src="./images/fade c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/fade q.png" alt="" class="skills__logo">
+                        <img src="./images/fade q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/fade e.png" alt="" class="skills__logo">
+                        <img src="./images/fade e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/fade x.png" alt="" class="skills__logo">
+                        <img src="./images/fade x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Fade, uma caçadora de recompensas turca, usa o poder dos pesadelos para capturar os segredos dos inimigos. Personificando o próprio terror, ela persegue os alvos e revela seus medos mais profundos para, depois, destruí-los na escuridão.</p>
@@ -463,23 +461,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/geeko c.png" alt="" class="skills__logo">
+                        <img src="./images/geeko c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/geeko q.png" alt="" class="skills__logo">
+                        <img src="./images/geeko q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/geeko e.png" alt="" class="skills__logo">
+                        <img src="./images/geeko e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/geeko x.png" alt="" class="skills__logo">
+                        <img src="./images/geeko x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Gekko, de Los Angeles, lidera um grupo muito unido de criaturas caóticas. Seus amigos atropelam tudo, tirando os inimigos do caminho. Depois, Gekko corre atrás deles para reagrupá-los e reiniciar o processo.</p>
@@ -498,23 +496,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/controlador.png" alt="" class="skills__logo">
+                        <img src="./images/controlador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/harbor c.png" alt="" class="skills__logo">
+                        <img src="./images/harbor c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/harbor q.png" alt="" class="skills__logo">
+                        <img src="./images/harbor q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/harbor e.png" alt="" class="skills__logo">
+                        <img src="./images/harbor e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/harbor x.png" alt="" class="skills__logo">
+                        <img src="./images/harbor x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Vindo do litoral indiano, Harbor entra em campo com a força da tormenta, empunhando tecnologia ancestral com domínio sobre a água. Ele libera corredeiras espumantes e ondas esmagadoras para proteger seus aliados ou atacar aqueles que se opõem a ele.</p>
@@ -533,23 +531,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/jett c.png" alt="" class="skills__logo">
+                        <img src="./images/jett c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/jett q.png" alt="" class="skills__logo">
+                        <img src="./images/jett q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/jett e.png" alt="" class="skills__logo">
+                        <img src="./images/jett e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/jett x.png" alt="" class="skills__logo">
+                        <img src="./images/jett x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Representando a Coreia do Sul, sua terra natal, Jett tem um estilo de luta ágil e evasivo que permite que ela assuma riscos como ninguém. Ela corre em meio a qualquer confronto, cortando os inimigos antes mesmo que eles percebam quem ou o que os atingiu.</p>
@@ -568,23 +566,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/kayo c.png" alt="" class="skills__logo">
+                        <img src="./images/kayo c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/kayo q.png" alt="" class="skills__logo">
+                        <img src="./images/kayo q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/kayo e.png" alt="" class="skills__logo">
+                        <img src="./images/kayo e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/kayo x.png" alt="" class="skills__logo">
+                        <img src="./images/kayo x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">KAY/O é uma máquina de guerra construída com um único propósito: neutralizar Radiantes. Ele é capaz de Suprimir habilidades inimigas, anulando a capacidade de contra-ataque dos adversários e dando a si e a seus aliados uma vantagem essencial em combate.</p>
@@ -603,23 +601,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/sentinela.png" alt="" class="skills__logo">
+                        <img src="./images/sentinela.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/killjoy c.png" alt="" class="skills__logo">
+                        <img src="./images/killjoy c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/killjoy q.png" alt="" class="skills__logo">
+                        <img src="./images/killjoy q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/killjoy e.png" alt="" class="skills__logo">
+                        <img src="./images/killjoy e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/killjoy x.png" alt="" class="skills__logo">
+                        <img src="./images/killjoy x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Killjoy, uma alemã genial, defende posições-chave no campo de batalha facilmente com seu arsenal de invenções. Se o dano causado por seu equipamento não der cabo dos inimigos, os efeitos negativos de seus queridos robôs darão conta do recado.</p>
@@ -638,23 +636,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/neon c.png" alt="" class="skills__logo">
+                        <img src="./images/neon c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/neon q.png" alt="" class="skills__logo">
+                        <img src="./images/neon q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/neon e.png" alt="" class="skills__logo">
+                        <img src="./images/neon e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/neon x.png" alt="" class="skills__logo">
+                        <img src="./images/neon x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Neon, nossa Agente filipina, avança em velocidades incríveis, descarregando surtos de radiância bioelétrica tão rapidamente quanto seu corpo consegue gerá-los. Ela corre à frente para pegar os inimigos de surpresa, abatendo-os mais rápido do que um raio.</p>
@@ -673,23 +671,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/controlador.png" alt="" class="skills__logo">
+                        <img src="./images/controlador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/omen c.png" alt="" class="skills__logo">
+                        <img src="./images/omen c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/omen q.png" alt="" class="skills__logo">
+                        <img src="./images/omen q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/omen e.png" alt="" class="skills__logo">
+                        <img src="./images/omen e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/omen x.png" alt="" class="skills__logo">
+                        <img src="./images/omen x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Omen, uma lembrança fantasmagórica, caça nas sombras. Ele cega os inimigos, teleporta-se pelo campo e deixa a paranoia assumir o controle enquanto o adversário tenta descobrir de onde virá seu próximo ataque.</p>
@@ -708,23 +706,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/phoenix c.png" alt="" class="skills__logo">
+                        <img src="./images/phoenix c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/phoenix q.png" alt="" class="skills__logo">
+                        <img src="./images/phoenix q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/phoenix e.png" alt="" class="skills__logo">
+                        <img src="./images/phoenix e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/phoenix x.png" alt="" class="skills__logo">
+                        <img src="./images/phoenix x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Chegando com tudo diretamente do Reino Unido, o poder estelar de Phoenix reluz em seu estilo de luta, incendiando o campo de batalha com luz e estilo. Tendo ajuda ou não, ele entra na luta como e quando achar que deve.</p>
@@ -743,23 +741,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/raze c.png" alt="" class="skills__logo">
+                        <img src="./images/raze c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/raze q.png" alt="" class="skills__logo">
+                        <img src="./images/raze q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/raze e.png" alt="" class="skills__logo">
+                        <img src="./images/raze e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/raze x.png" alt="" class="skills__logo">
+                        <img src="./images/raze x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Raze chega do Brasil com uma explosão de carisma e armas enormes. Com seu estilo de jogo "porradeiro", ela é craque em desentocar inimigos entrincheirados e limpar espaços apertados com uma bela dose de BUUUM!</p>
@@ -778,23 +776,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/reyna c.png" alt="" class="skills__logo">
+                        <img src="./images/reyna c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/reyna q.png" alt="" class="skills__logo">
+                        <img src="./images/reyna q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/reyna e.png" alt="" class="skills__logo">
+                        <img src="./images/reyna e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/reyna x.png" alt="" class="skills__logo">
+                        <img src="./images/reyna x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Criada no coração do México, Reyna domina o combate individual, destacando-se a cada abate efetuado. Sua capacidade só é limitada por sua própria perícia, tornando-a bastante dependente de desempenho.</p>
@@ -813,23 +811,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/sentinela.png" alt="" class="skills__logo">
+                        <img src="./images/sentinela.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/sage c.png" alt="" class="skills__logo">
+                        <img src="./images/sage c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/sage q.png" alt="" class="skills__logo">
+                        <img src="./images/sage q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/sage e.png" alt="" class="skills__logo">
+                        <img src="./images/sage e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/sage x.png" alt="" class="skills__logo">
+                        <img src="./images/sage x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Como uma verdadeira fortaleza chinesa, Sage traz segurança para si mesma e para a equipe aonde quer que vá. Capaz de reviver aliados e rechaçar investidas agressivas, ela oferece um centro de calmaria em meio ao caos da batalha.</p>
@@ -848,23 +846,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/skye c.png" alt="" class="skills__logo">
+                        <img src="./images/skye c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/skye q.png" alt="" class="skills__logo">
+                        <img src="./images/skye q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/skye e.png" alt="" class="skills__logo">
+                        <img src="./images/skye e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/skye x.png" alt="" class="skills__logo">
+                        <img src="./images/skye x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Mandando um salve direto da Austrália, Skye e sua equipe de feras desbravam territórios hostis. Com seus poderes de cura e suas criações que partem pra cima dos inimigos, qualquer equipe ficará mais forte e mais segura tendo Skye como aliada.</p>
@@ -883,23 +881,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/iniciador.png" alt="" class="skills__logo">
+                        <img src="./images/iniciador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/sova c.png" alt="" class="skills__logo">
+                        <img src="./images/sova c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/sova q.png" alt="" class="skills__logo">
+                        <img src="./images/sova q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/sova e.png" alt="" class="skills__logo">
+                        <img src="./images/sova e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/sova x.png" alt="" class="skills__logo">
+                        <img src="./images/sova x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Nascido sob o eterno inverno das tundras russas, Sova rastreia, encontra e elimina inimigos com eficiência e precisão implacáveis. Seu arco personalizado e suas habilidades inigualáveis de reconhecimento garantem que nenhuma presa escape.</p>
@@ -918,23 +916,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/controlador.png" alt="" class="skills__logo">
+                        <img src="./images/controlador.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/viper c.png" alt="" class="skills__logo">
+                        <img src="./images/viper c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/viper q.png" alt="" class="skills__logo">
+                        <img src="./images/viper q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/viper e.png" alt="" class="skills__logo">
+                        <img src="./images/viper e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/viper x.png" alt="" class="skills__logo">
+                        <img src="./images/viper x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Viper, a química dos Estados Unidos, emprega uma variedade de dispositivos químicos venenosos para controlar o campo de batalha e prejudicar a visão do inimigo. Se as toxinas não matarem a presa, seus jogos mentais certamente o farão.</p>
@@ -953,23 +951,23 @@ function alterarContexto(contexto) {
                 <div class="container__skills">
                     <div class="role__agente-icone skills active">
                         <p>INFO</p>
-                        <img src="/images/duelista.png" alt="" class="skills__logo">
+                        <img src="./images/duelista.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-c skills">
                         <p>C</p>
-                        <img src="/images/yoru c.png" alt="" class="skills__logo">
+                        <img src="./images/yoru c.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-q skills">
                         <p>Q</p>
-                        <img src="/images/yoru q.png" alt="" class="skills__logo">
+                        <img src="./images/yoru q.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-e skills">
                         <p>E</p>
-                        <img src="/images/yoru e.png" alt="" class="skills__logo">
+                        <img src="./images/yoru e.png" alt="" class="skills__logo">
                     </div>
                     <div class="skill-x skills">
                         <p>X</p>
-                        <img src="/images/yoru x.png" alt="" class="skills__logo">
+                        <img src="./images/yoru x.png" alt="" class="skills__logo">
                     </div>
                 </div>
                 <p class="info__agente" id="atualizar-info__agente">Yoru, nativo do Japão, abre fendas na realidade para infiltrar as linhas inimigas sem ser visto. Ele usa tanto artimanhas quanto táticas agressivas, e os alvos são abatidos sem saber de onde o ataque veio.</p>
@@ -1723,7 +1721,6 @@ function atualizarInfoSkill(contexto, skill) {
         }
     }
 }
-
 
 btnConfirmar.style.pointerEvents = 'none' //Para que ele nao toque som quando passar o mouse por cima, a menos que um agente esteja selecionado
 
